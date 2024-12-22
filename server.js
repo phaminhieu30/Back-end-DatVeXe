@@ -38,7 +38,9 @@ app.use("/public", express.static(publicPathDicrectory));
 
 //dùng router
 // app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocs), rootRouter);
-
+app.get('/', (req, res) => {
+  res.send('Hello from Vercel!');
+});
 app.use("/api/v1", rootRouter);
 
 //Lắng nghe sự kiện kết nối
